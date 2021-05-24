@@ -1,0 +1,63 @@
+[ 
+    {
+        "title": "Learn more",
+        "content": [
+            {
+                "label":"How it works?",
+                "url": ""
+            },
+            {
+                "label":"Pricing",
+                "url": ""
+            },
+            {
+                "label":"Media Release",
+                "url": ""
+            },
+            {
+                "label":"Sitemap",
+                "url": ""
+            }
+        ]
+    },
+
+
+    {
+        "title": "Support",
+        "content" : [
+            {
+                "label": "FAQ",
+                "url": ""
+            },
+            
+            {
+            "label":"Contact Us",
+            "url": ""
+            }
+        ]
+    },
+
+
+    {
+        "title": "About Us",
+        "content": [
+            {
+                "label":  "About",
+                "url": ""
+            },
+            {
+                "label" : "Careers",
+                "url": ""
+            },
+            {
+                "label" :"Terms of Service",
+                "url": ""
+            },
+            {
+                "label" : "Privacy Policy",
+                "url": ""
+            }
+            
+        ]
+    }
+]
