@@ -1,0 +1,17 @@
+@import './bootstrap/custom';
+@import '~bootstrap/scss/bootstrap';
+@import './styles';
+
+body{
+    overflow-x: hidden;
+}
+.navbar-expand-lg { 
+    flex-wrap : wrap ; justify-content : space-between ; 
+}
+
+@media ( min-width : 1400px )
+{
+     body {
+          max-width : 1300px ; margin : auto ; 
+        }
+}

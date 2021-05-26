@@ -1,0 +1,93 @@
+{
+ "locality": [
+    {
+        "zipCode":"35801 thru 35816",
+        "city":"Huntsville",
+        "country":"Alabama (AL)"
+    },
+
+    {
+        "zipCode":"99501 thru 99524",
+        "city":"Anchorage",
+        "country":"Alaska (AK)"
+    },
+
+    {
+        "zipCode":"85001 thru 85055",
+        "city":"Phoenix",
+        "country":"Arizona (AZ)"
+    },
+
+    {
+        "zipCode":"72201 thru 72217",
+        "city":"Little Rock",
+        "country":"Arkansas (AR)"
+    },
+
+    {
+        "zipCode":"94203 thru 94209",
+        "city":"Sacramento",
+        "country":"California (CA)"
+    },
+
+    {
+        "zipCode":"90001 thru 90089",
+        "city":"Los Angeles",
+        "country":"California (CA)"
+    },
+
+    {
+        "zipCode":"90209 thru 90213",
+        "city":"Beverly Hills",
+        "country":"California (CA)"
+    },
+
+    {
+        "zipCode":"80201 thru 80239",
+        "city":"Denver",
+        "country":"Colorado (CO)"
+    },
+
+    {
+        "zipCode":"06101 thru 06112",
+        "city":"Hartford",
+        "country":"Conneticut (CT)"
+    },
+
+    {
+        "zipCode":"19901 thru 19905",
+        "city":"Dover",
+        "country":"Deleware (DE)"
+    },
+
+    {
+        "zipCode":"CT3",
+        "city":"Ash",
+        "country":"Canterbury"
+    },
+
+    {
+        "zipCode":"LE14",
+        "city":"Ab Kettleby",
+        "country":"England"
+    },
+
+    {
+        "zipCode":"BA8",
+        "city":"Abbas Combe",
+        "country":"England"
+    },
+
+    {
+        "zipCode":"MK45",
+        "city":"Ampthill",
+        "country":"England"
+    },
+
+    {
+        "zipCode":"CO7",
+        "city":"Alresford",
+        "country":"England"
+    }
+]
+}
