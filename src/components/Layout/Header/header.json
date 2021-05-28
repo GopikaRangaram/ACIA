@@ -1,0 +1,27 @@
+[
+    {
+        "claimOptions":[
+            {
+                "Option":"claim-1"
+            },
+            {
+                "Option":"claim-2"
+            },
+            {
+                "Option":"claim-3"
+            }
+        ],
+    
+        "payBillOptions":[
+            {
+                "Option":"credit"
+            },
+            {
+                "Option":"wire"
+            },
+            {
+                "Option":"eft"
+            }
+        ]
+    }
+]

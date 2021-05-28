@@ -5,6 +5,12 @@
     background-size: cover;
     background-position: center
 }
+
+.navHeader{
+    background-color:rgb(124, 83, 236);
+    // background-color:  linear-gradient(90deg,rgb(124, 83, 236) 0%, rgb(177, 73, 218) 100%) 0% 0% no-repeat padding-box;
+}
+
 .navbar-light{
     color: black;
     border-bottom: 1px solid white
@@ -28,7 +34,7 @@
 color: white;
 }
 .dropdown .dropdown-menu .dropdown-item{
-    color:#5A2F7D;
+    color:#9f4bb4;
 }
 .dropdown-menu {
     border-radius: 20px;
@@ -81,7 +87,7 @@ color: white;
     border-radius: 33px;
     background: transparent linear-gradient(90deg, #FF7B89 0%, #F69C57 100%) 0% 0% no-repeat padding-box;
     border: none;
-    width: 81px;
+    width: auto;
     height: 46px;
     color: white
 }
@@ -89,7 +95,7 @@ color: white;
     font: normal normal bold 18px/22px Karla;
     color: #FFFFFF
 }
-.family-image{
-    position: relative;
-    top: 25px
+
+.header-image{
+    margin-top:25px;
 }

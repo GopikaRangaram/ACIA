@@ -1,10 +1,13 @@
 import React, { Fragment } from 'react'
 import '../../scss/styles/HomePage.scss';
 import '../../scss/styles/MotorInsurancePage.scss';
-import { Container, Card, CardColumns, Image, Row, Col, Button} from 'react-bootstrap';
-import ZipCode from './ZipCode';
+import '../../components/Layout/Header/header.scss';
+import { Container, Card, CardColumns, Image, Row, Col, Button,
+ ButtonGroup, DropdownButton, Dropdown} from 'react-bootstrap';
+// import GetZip from './getZipCode';
 import {ArrowRight} from 'react-bootstrap-icons';
 import motorCard from './motorCardContent.json';
+import header from './motorheader.json';
 import insuranceType from './typesOfInsurance.json';
 
 
@@ -16,8 +19,63 @@ return (
 
 <Fragment>
 
+<Container fluid={'true'} className='header'>
+<Row>
 
-<ZipCode />
+     {
+      header.map((item) => {
+        return(
+        <Row>
+          <Col xs={2} md={4} lg={6} className="mx-4">
+          <p className="title1">{item.Title1}{' '}<span className="title2">{item.Title2}</span></p>
+          <p className="content">{item.content1}<br></br> {item.content2}</p>
+          <div className="container-button">
+            <div className="container" >
+              
+              <ButtonGroup style={{alignItems:"center"}}>              
+                {
+                  item.dropdown.map((list) => {
+                    return(
+                    <DropdownButton variant="light" title={list.DropdownName} id="bg-nested-dropdown">
+                      {
+                        list.DropdownLink.map((link) => {
+                          return(
+                            <Dropdown.Item>
+                              {link.dropdownslink}
+                            </Dropdown.Item>
+                          )
+                        }) 
+                      }
+                    </DropdownButton>
+                    )
+                  })
+                }
+                  <Button 
+                  className="go-button px-3" variant="light">
+                    <span className="go" >Get Quote{' '}&gt;</span>
+                   </Button>
+              </ButtonGroup>
+            </div>     
+          </div>
+        </Col>
+
+       
+        <Col className="header-image">
+         <img src={require(`../../assets/images/header/${item.imagename}.png`).default}
+         alt={item.imagename}/>
+        </Col>
+      </Row>
+        )
+       })
+
+} 
+ </Row>
+</Container>
+
+
+
+
+{/* <GetZip /> */}
 {/* ------------------------------------------- Find the right motor insurance -------------------------*/}
 
 <Container fluid={'true'} className="car-description-container">

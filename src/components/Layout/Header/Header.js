@@ -1,8 +1,9 @@
-import {Link, useHistory} from 'react-router-dom';
-import {Col, Row, Button, Navbar, Nav,ButtonGroup, DropdownButton, Dropdown, NavDropdown} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+import { Button, Navbar, Nav, NavDropdown, Row} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope,faMobileAlt} from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF,faTwitter,faLinkedinIn,faYoutube} from '@fortawesome/free-brands-svg-icons';
+import headerJSON from './header.json';
 import './header.scss';
 import {useState, useEffect} from 'react';
 import React from 'react';
@@ -10,7 +11,8 @@ import React from 'react';
 function Header(){
 
 
-  const [isOpen,setIsOpen]=useState(false);
+  const [isClaimOpen,setIsClaimOpen]=useState(false);
+  const [isBillOpen,setIsBillOpen]=useState(false);
 
   useEffect(()=>{
 
@@ -40,16 +42,12 @@ function Header(){
 
   },[]);
 
-  const history = useHistory();
-  const loadMotorInusrancePage = () => {
-   history.push('/motor-insurance');
- }
 
  
 
   return (
 
-    <div className="header">
+    <div className="navHeader">
 
       <Navbar variant="light" expand="lg">
         <Navbar.Brand href="#home">
@@ -68,53 +66,62 @@ function Header(){
 
       <Navbar variant="dark" id="my-header" expand="lg"> 
         <Navbar.Brand className="mx-3" as={Link}  to="/">
-          <img src={require('../../../assets/images/header/logo.png').default} className="d-inline-block align-top" alt="React Bootstrap logo"/>{' '}
+          <img src={require('../../../assets/images/header/logo.png').default}
+           className="d-inline-block align-top" alt="React Bootstrap logo"/>{' '}
         </Navbar.Brand>
             <Nav className="ml-auto" id="my-nav">
               <Nav.Link className="mx-3 about" to="/about" >About us</Nav.Link>
               <Nav.Link className="mx-3 blog" href="#blog"  >Blog</Nav.Link>
+
               <NavDropdown className="mx-3 claim" href="#claim" title={<span style={{color:"white"}}>Claim</span>}
-                onMouseOver={()=>{setIsOpen(true)}} onMouseLeave={()=>{setIsOpen(false)}} show={isOpen}> 
-                <NavDropdown.Item>Menu Item 1</NavDropdown.Item>
-                <NavDropdown.Item>Menu Item 2</NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link className="mx-3 pay_a_bill" href="#pay_a_bill" >Pay a Bill</Nav.Link>
+                onMouseOver={()=>{setIsClaimOpen(true)}} onMouseLeave={()=>{setIsClaimOpen(false)}} show={isClaimOpen}>
+                  {
+                    headerJSON.map((item) => {
+                      return(
+                        <Row>
+                          {
+                            item.claimOptions.map((link) => {
+                              return(
+                                 <NavDropdown.Item>
+                                   {link.Option}
+                                 </NavDropdown.Item>
+                              )
+                            })
+                          }
+                        </Row>
+                      )
+                    })
+                  }
+              </NavDropdown> 
+
+              <NavDropdown className="mx-3 claim" href="#claim" title={<span style={{color:"white"}}>Pay a Bill</span>}
+                onMouseOver={()=>{setIsBillOpen(true)}} onMouseLeave={()=>{setIsBillOpen(false)}} show={isBillOpen}>
+                  {
+                    headerJSON.map((item) => {
+                      return(
+                        <Row>
+                          {
+                            item.payBillOptions.map((link) => {
+                              return(
+                                 <NavDropdown.Item>
+                                   {link.Option}
+                                 </NavDropdown.Item>
+                              )
+                            })
+                          }
+                        </Row>
+                      )
+                    })
+                  }
+              </NavDropdown> 
+
+          
               <Nav.Link className="mx-3 sign_in" href="#sign_in" >Sign In</Nav.Link>
               <Button className="mx-3 get-quote-button" variant="primary">
-                <span className="get-quote">Get a Quote</span>
+                <span className="get-quote">Get Quote</span>
               </Button>
             </Nav>
         </Navbar>
-
-      <Row >
-        <Col xs={2} md={4} lg={6} className="mx-4">
-          <p className="title1">Find the{' '}<span className="title2">Perfect</span></p>
-          <p className="content">Connecting people through an easy to use web page application<br></br> built for all the device.</p>
-          <div className="container-button">
-            <div className="container" >
-              <ButtonGroup style={{alignItems:"center"}}>
-                <DropdownButton variant="light" title={<span className="dropdown-title1">Motor Insurance</span>} id="bg-nested-dropdown">
-                  <Dropdown.Item eventKey="1">Dropdown link</Dropdown.Item>
-                  <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
-                </DropdownButton>
-                <DropdownButton variant="light" as={ButtonGroup} title={<span className="dropdown-title2">Vehicle Type</span>} id="bg-nested-dropdown">
-                  <Dropdown.Item eventKey="1">Dropdown link</Dropdown.Item>
-                  <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
-                </DropdownButton>
-                <Button onClick={loadMotorInusrancePage}
-                className="go-button" variant="light">
-                  <span className="go" >Go{' '}&gt;</span>
-                  </Button>
-              </ButtonGroup>
-            </div>     
-          </div>
-        </Col>
-        <Col lg={1} />
-        <Col className="family-image">
-          <img src={require('../../../assets/images/header/family.png').default} width="375px" height="425px" alt="React Bootstrap logo"/>
-        </Col>
-      </Row>
-
     </div>
   );
 }

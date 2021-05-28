@@ -1,15 +1,89 @@
 import React, { Fragment } from 'react'
 import '../../scss/styles/HomePage.scss';
 import '../../scss/styles/MotorInsurancePage.scss';
-import { Container, Card, Image, Row, Col, Button} from 'react-bootstrap';
+import { Container, Card, Image, Row, Col, Button,
+  ButtonGroup, DropdownButton, Dropdown } from 'react-bootstrap';
 import {ArrowRight} from 'react-bootstrap-icons';
 import cardContent from './cardContent.json';
+import header from './homeheader.json';
 import organisation from './homepage.json';
+import { useHistory} from 'react-router-dom';
+
+
 
 export default function HomePage() {
 
+  let history = useHistory();
+  function loadMotorInusrancePage(){
+   history.push('/motor-insurance');
+ }
+
+
+
 return (
+
 <Fragment>
+
+<Container fluid={'true'} className='header'>
+<Row>
+
+     {
+      header.map((item) => {
+        return(
+        <Row>
+          <Col xs={2} md={4} lg={6} className="mx-4">
+          <p className="title1">{item.Title1}{' '}<span className="title2">{item.Title2}</span></p>
+          <p className="content">{item.content1}<br></br> {item.content2}</p>
+          <div className="container-button">
+            <div className="container" >
+              
+              <ButtonGroup style={{alignItems:"center"}}>              
+                {
+                  item.dropdown.map((list) => {
+                    return(
+                    <DropdownButton variant="light" title={list.DropdownName} id="bg-nested-dropdown">
+                      {
+                        list.DropdownLink.map((link) => {
+                          return(
+                            <Dropdown.Item>
+                              {link.dropdownslink}
+                            </Dropdown.Item>
+                          )
+                        }) 
+                      }
+                    </DropdownButton>
+                    )
+                  })
+                }
+                  <Button onClick={loadMotorInusrancePage}
+                  className="go-button px-3" variant="light">
+                    <span className="go" >Go{' '}&gt;</span>
+                   </Button>
+              </ButtonGroup>
+            </div>     
+          </div>
+        </Col>
+
+        
+        <Col className="header-image">
+         <img src={require(`../../assets/images/header/${item.imagename}.png`).default}
+         alt={item.imagename}/>
+        </Col>
+      </Row>
+        )
+       })
+
+} 
+ </Row>
+</Container>
+
+
+
+
+
+{/* ----------------------------------------------------------------------------------------------------------*/}
+
+
 
 <Container fluid={'true'} className="car-description-container">
 <Row fluid={'true'}>

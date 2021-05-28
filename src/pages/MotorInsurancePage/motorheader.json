@@ -1,0 +1,38 @@
+[
+    
+    {
+     
+        "Title1":"Motor",
+        "Title2":" Insurance",
+        "content1":"You can save upto £250* on your premiums when you buy ",
+        "content2":"insurance online with us",
+        "imagename":"car",
+       "dropdown" : [
+            {
+            "DropdownName":" Motor insurance",
+            "DropdownLink":[
+                {   
+                    "dropdownslink":"motor-dropdownlink1"
+                },
+                
+                {
+                    "dropdownslink":"motor-dropdownlink2"
+                }
+            ]
+            },
+
+            {
+            "DropdownName":" Car",
+            "DropdownLink":[
+                    {   
+                        "dropdownslink":" motor-cycle "
+                    },
+                    
+                    {
+                        "dropdownslink":" truck "
+                    }
+                ]
+            }
+        ]
+    }
+]
