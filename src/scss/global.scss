@@ -15,3 +15,26 @@ body{
           max-width : 1300px ; margin : auto ; 
         }
 }
+
+.form-layout {
+    background-color:white;
+    margin: 50px 200px 50px 200px;
+    height: auto;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+.page_label {
+    text-align: center;
+    color: #5A2F7D;
+    font-weight: bolder;
+    
+}
+
+.page_description {
+    text-align: center;
+}
+
+.claim_page_label {
+    background-color:whitesmoke;
+}

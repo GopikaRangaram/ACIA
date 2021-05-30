@@ -1,0 +1,50 @@
+[
+    {
+        "page_label":"Pay a Bill",
+        "page_description":"Please fill the following Details to pay a bill",
+        "fields" : [
+            {
+                "field_id" : "policy_number",
+                "field_label": "Policy Number",
+                "field_mandatory": "yes",
+                "field_placeholder": "",
+                "field_type":"text",
+                "field_value":""
+            },
+
+            {
+                "field_id" : "zip_code",
+                "field_label": "Zip Code",
+                "field_mandatory": "yes",
+                "field_placeholder": "",
+                "field_type":"text",
+                "field_value":""
+            }
+
+        ]
+    },
+
+    
+   {
+        "page_label":"Pay a Bill",
+        "page_description":"Please fill the following Details to pay a bill",
+       "fields":[
+           {
+            "field_id" : "policy_type",
+            "field_label": "Policy Type",
+            "field_mandatory": "yes",
+            "field_placeholder": "",
+            "field_type":"radio",
+            "field_options":[
+                {
+                    "option_label":"Personal & Commercial"
+                },
+                {
+                    "option_label":"Life & Health"
+                }
+            ],
+            "field_value":""  
+           }
+       ]
+   }
+]
