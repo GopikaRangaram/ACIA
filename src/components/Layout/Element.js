@@ -10,6 +10,8 @@ const Element = ( {field: {
     field_id,
     field_label,
     field_placeholder,
+    field_mandatory,
+    errors,
     field_value,
     field_options
 } }) => {
@@ -20,6 +22,8 @@ const Element = ( {field: {
                 field_id = {field_id}
                 field_label = {field_label}
                 field_placeholder = {field_placeholder}
+                field_mandatory = {field_mandatory}
+                errors={errors}
                 field_value = {field_value}
             />)
               
@@ -30,6 +34,8 @@ const Element = ( {field: {
                 field_label = {field_label}
                 field_placeholder = {field_placeholder}
                 field_value = {field_value}
+                field_mandatory = {field_mandatory}
+                errors={errors}
                 field_options = { field_options }
                 />)
                
@@ -40,6 +46,8 @@ const Element = ( {field: {
                 field_label = {field_label}
                 field_placeholder = {field_placeholder}
                 field_value = {field_value}
+                field_mandatory = {field_mandatory}
+                errors={errors}
                 field_options = { field_options }
             />)
                
@@ -50,6 +58,8 @@ const Element = ( {field: {
                 field_label = {field_label}
                 field_placeholder = {field_placeholder}
                 field_value = {field_value}
+                field_mandatory = {field_mandatory}
+                errors={errors}
                 field_options = { field_options }
             />)
                 
@@ -59,6 +69,8 @@ const Element = ( {field: {
                 field_id = {field_id}
                 field_label = {field_label}
                 field_placeholder = {field_placeholder}
+                field_mandatory = {field_mandatory}
+                errors={errors}
                 field_value = {field_value}
             />)
                

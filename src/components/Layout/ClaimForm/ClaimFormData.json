@@ -1,240 +1,468 @@
 [
     {
-        "page_label":"Policy Details",
-        "fields" : [
+        "page_label": "Make a Claim",
+        "page_description": "Please fill the following details to make Claim",
+        "fields":[
             {
-                "field_id" : "policy_number",
-                "field_label": "Policy Number",
-                "field_mandatory": "yes",
-                "field_placeholder": "",
-                "field_type":"text",
-                "field_value":""
-            },
-
-            {
-                "field_id" : "select_policy",
-                "field_label": "Select Policy",
-                "field_mandatory": "yes",
-                "field_placeholder": "--Please Select--",
-                "field_options":[
-
+                "layout": "row",
+                "page_sub_label":"Policy Details",
+                "fields":[
                     {
-                        "option_label":"#"
+                        "field_id": "policy_number",
+                        "field_label": "Policy Number",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "",
+                        "field_type": "text",
+                        "field_value": "",
+                        "errors": ""
                     },
 
                     {
-                        "option_label":"#"
+                        "field_id" : "select_policy",
+                        "field_label": "Select Policy",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "--Please Select--",
+                        "field_options":[
+        
+                            {
+                                "option_label":"Motor Insurance",
+                                "option_id":"motor_Insurance",
+                                "option_value":"Motor Insurance"
+                            }
+        
+                        ],
+                        "field_type":"select",
+                        "field_value":"",
+                        "errors": ""
+                    },
+
+                    {
+                        "field_id" : "loss_date",
+                        "field_label": "Loss Date",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "DD/MM/YY",
+                        "field_type":"date",
+                        "field_value":"",
+                        "errors":""
+                    } 
+                ]
+            },
+
+            {
+                "layout": "row",
+                "page_sub_label":"Basic Details",
+                "fields": [
+                    {
+                        "field_id" : "how_the_claim_was_reported",
+                        "field_label": "How the claim was reported?",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "--Please Select--",
+                        "field_options":[
+
+                            {
+                                "option_label":"Phone",
+                                "option_id":"phone",
+                                "option_value":"Phone"
+                            },
+
+                            {
+                                "option_label":"Email",
+                                "option_id":"email",
+                                "option_value":"Email"
+                            },
+                            
+                            {
+                                "option_label":"Fax",
+                                "option_id":"fax",
+                                "option_value":"Fax"
+                            } 
+
+                        ],
+                        "field_type":"select",
+                        "field_value":"",
+                        "errors": ""
+                    },
+
+                    {
+                        "field_id" : "who_reported_the_claim",
+                        "field_label": "Who Reported the Claim?",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "--Please Select--",
+                        "field_options":[
+        
+                            {
+                                "option_label":"Insured",
+                                "option_id":"insured",
+                                "option_value":"Insured"
+                            },
+        
+                            {
+                                "option_label":"Additional Insured",
+                                "option_id":"additional_insured",
+                                "option_value":"Additional Insured"
+                            },
+                            
+                            {
+                                "option_label":"Others",
+                                "option_id":"others",
+                                "option_value":"Others"
+                            } 
+        
+                        ],
+                        "field_type":"select",
+                        "field_value":"",
+                        "errors": ""
+                    },
+
+                    {
+                        "field_id" : "vehicles_involved_the_loss",
+                        "field_label": "Vehicles involved the loss?",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "",
+                        "field_type":"radio",
+                        "field_options": [
+        
+                            {
+                                "option_label":"Registration Number",
+                                "option_id":"registration_number",
+                                "option_value":"Registration Number"
+                            },
+        
+                            {
+                                "option_label": "Manufacturer",
+                                "option_id":"manufacturer",
+                                "option_value":"Manufacturer"
+                            }, 
+                            
+                            {
+                                "option_label": "Model",
+                                "option_id":"model",
+                                "option_value":"Model"
+                            },
+        
+                            {
+                                "option_label": "Year",
+                                "option_id":"year",
+                                "option_value":"Year"
+                            }
+        
+                        ],
+                        "field_value":"",
+                        "errors":""
                     }
 
-                ],
-                "field_type":"select",
-                "field_value":""
+                ]
             },
-
             {
-                "field_id" : "loss_date",
-                "field_label": "Loss Date",
-                "field_mandatory": "yes",
-                "field_placeholder": "DD/MM/YY",
-                "field_type":"date",
-                "field_value":""
-            }
-        ]
-    },
-
-
-    {
-        "page_label":"Basic Details",
-        "fields" : [
-            {
-                "field_id" : "how_the_claim_was_reported",
-                "field_label": "How the claim was reported?",
-                "field_mandatory": "yes",
-                "field_placeholder": "--Please Select--",
-                "field_options":[
-
+                "layout": "row",
+                "page_sub_label":"Loss Details",
+                "fields": [
                     {
-                        "option_label":"#"
+                        "field_id" : "what_happened",
+                        "field_label": "What happened?",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "",
+                        "field_type":"text",
+                        "field_value":"",
+                        "errors":""
                     },
 
                     {
-                        "option_label":"#"
-                    } 
-
-                ],
-                "field_type":"select",
-                "field_value":""
-            },
-
-            {
-                "field_id" : "vehicles_involved_the_loss",
-                "field_label": "Vehicles involved the loss?",
-                "field_mandatory": "yes",
-                "field_placeholder": "",
-                "field_type":"text",
-                "field_value":""
-            }
-        ]
-    },
-
-    {
-        "page_label":"Loss Details",
-        "fields" : [
-            {
-                "field_id" : "what_happened",
-                "field_label": "What happened?",
-                "field_mandatory": "yes",
-                "field_placeholder": "",
-                "field_type":"text",
-                "field_value":""
-            },
-
-            {
-                "field_id" : "cause_of_loss",
-                "field_label": "Cause of Loss",
-                "field_mandatory": "yes",
-                "field_placeholder": "--Please Select--",
-                "field_options":[
-
-                    {
-                        "option_label":"#"
-                    },
-
-                    {
-                        "option_label":"#"
-                    } 
-
-                ],
-                "field_type":"select",
-                "field_value":""
-            },
-
-            {
-                "field_id" : "accident_location_details",
-                "field_label": "Accident Location Details",
-                "field_mandatory": "yes",
-                "field_placeholder": "",
-                "field_type":"text",
-                "field_value":""
-            },
-
-            {
-                "field_id" : "invloved_person_names",
-                "field_label": "Involved Person Names",
-                "field_mandatory": "yes",
-                "field_placeholder": "",
-                "field_type":"text",
-                "field_value":""
-            }
-        ]
-    },
-
-    {
-        "page_label":"Insured request for services",
-        "fields" : [
-            {
-                "field_id" : "rental",
-                "field_label": "Rental",
-                "field_mandatory": "yes",
-                "field_placeholder": "",
-                "field_type":"radio",
-                "field_options":[
-                    {
-                        "option_label":"Yes"
-                    },
-
-                    {
-                        "option_label":"No"
-                    } 
-                ],
-                "field_value":""
-            },
-
-            {
-                "field_id" : "towing",
-                "field_label": "Towing",
-                "field_mandatory": "yes",
-                "field_placeholder": "",
-                "field_type":"radio",
-                "field_options":[
-                    {
-                        "option_label":"Yes"
-                    },
-
-                    {
-                        "option_label":"No"
-                    } 
-                ],
-                "field_value":""
-            },
-
-            {
-                "field_id" : "auto_body_repair",
-                "field_label": "Auto Body Repair",
-                "field_mandatory": "yes",
-                "field_placeholder": "--Please Select--",
-                "field_options":[
-                    {
-                        "option_label":"Yes"
-                    },
-
-                    {
-                        "option_label":"No"
-                    } 
-                ],
-                "field_type":"select",
-                "field_value":""
-            },
-
-            {
-                "field_id" : "other_services",
-                "field_label": "Other Services",
-                "field_mandatory": "yes",
-                "field_placeholder": "--Please Select--",
-                "field_options":[
-                    {
-                        "option_label":"Yes"
-                    },
-
-                    {
-                        "option_label":"No"
-                    } 
-                ],
-                "field_type":"select",
-                "field_value":""
-            }
-        ]
-    },
-
-    {
-        "page_label":"Map the losses to coverage existing on a policy",
-        "fields" : [
-            {
-                "field_id" : "map_loss_to_coverage",
-                "field_label": "",
-                "field_mandatory": "yes",
-                "field_placeholder": "",
-                "field_type":"radio",
-                "field_options":[
-
-                    {
-                        "option_label":"Collision"
-                    },
-
-                    {
-                        "option_label":"Comprehensive"
-                    },
-
-                    {
-                        "option_label":"Theft"
-                    },
-
-                    {
-                        "option_label":"CNG fitment"
+                        "field_id" : "cause_of_loss",
+                        "field_label": "Cause of Loss",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "--Please Select--",
+                        "field_options":[
+        
+                            {
+                                "option_label":"Fire",
+                                "option_id":"fire",
+                                "option_value":"Fire"
+                            },
+        
+                            {
+                                "option_label":"Collision",
+                                "option_id":"collision",
+                                "option_value":"Collision"
+                            },
+        
+                            {
+                                "option_label":"Theft",
+                                "option_id":"theft",
+                                "option_value":"Theft"
+                            },
+        
+                            {
+                                "option_label":"Overturn",
+                                "option_id":"overturn",
+                                "option_value":"Overturn"
+                            } 
+        
+                        ],
+                        "field_type":"select",
+                        "field_value":"",
+                        "errors":""
                     }
-                ],
-                "field_value":""
+                ]
+            },
+
+            {
+                "layout": "row",
+                "page_sub_label":"Accident Location Details",
+                "fields":[
+                    {
+                        "field_id" : "address_line_1",
+                        "field_label": "Address Line 1",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "",
+                        "field_type":"text",
+                        "field_value":"",
+                        "errors":""
+                    },
+
+                    {
+                        "field_id" : "address_line_2",
+                        "field_label": "Address Line 2",
+                        "field_mandatory": " ",
+                        "field_placeholder": "",
+                        "field_type":"text",
+                        "field_value":"",
+                        "errors":""
+                    },
+
+                    {
+                        "field_id" : "country",
+                        "field_label": "Country",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "",
+                        "field_type":"text",
+                        "field_value":"",
+                        "errors":""
+                    },
+
+                    {
+                        "field_id" : "zip_code",
+                        "field_label": "Zip Code",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "",
+                        "field_type":"text",
+                        "field_value":"",
+                        "errors":""
+                    }
+   
+                ]
+            },
+
+            {
+                "layout": "row",
+                "page_sub_label":"Involved Parties",
+                "fields":[
+
+                    {
+                        "field_id" : "first_name",
+                        "field_label": "First Name",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "",
+                        "field_type":"text",
+                        "field_value":"",
+                        "errors":""
+
+                    },
+
+                    {
+
+                        "field_id" : "last_name",
+                        "field_label": "Last Name",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "",
+                        "field_type":"text",
+                        "field_value":"",
+                        "errors":""
+
+                    },
+
+                    {
+                        "field_id" : "address_line_1",
+                        "field_label": "Address Line 1",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "",
+                        "field_type":"text",
+                        "field_value":"",
+                        "errors":""
+                    },
+
+                    {
+                        "field_id" : "address_line_2",
+                        "field_label": "Address Line 2",
+                        "field_mandatory": " ",
+                        "field_placeholder": "",
+                        "field_type":"text",
+                        "field_value":"",
+                        "errors":""
+                    },
+
+                    {
+                        "field_id" : "country",
+                        "field_label": "Country",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "",
+                        "field_type":"text",
+                        "field_value":"",
+                        "errors":""
+                    },
+
+                    {
+                        "field_id" : "zip_code",
+                        "field_label": "Zip Code",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "",
+                        "field_type":"text",
+                        "field_value":"",
+                        "errors":""
+                    }
+   
+                ]
+            },
+
+            {
+                "layout": "row",
+                "page_sub_label":"Insured request for services",
+                "fields":[
+                    {
+                        "field_id" : "rental",
+                        "field_label": "Rental",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "",
+                        "field_type":"radio",
+                        "field_options":[
+                            {
+                                "option_label":"Yes",
+                                "option_id":"yes",
+                                "option_value":"Yes"
+                            },
+        
+                            {
+                                "option_label":"No",
+                                "option_id":"no",
+                                "option_value":"No"
+                            } 
+                        ],
+                        "field_value":"",
+                        "errors":""
+                    },
+        
+                    {
+                        "field_id" : "towing",
+                        "field_label": "Towing",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "",
+                        "field_type":"radio",
+                        "field_options":[
+                            {
+                                "option_label":"Yes",
+                                "option_id":"yes",
+                                "option_value":"Yes"
+                            },
+        
+                            {
+                                "option_label":"No",
+                                "option_id":"no",
+                                "option_value":"No"
+                            } 
+                        ],
+                        "field_value":"",
+                        "errors":""
+                    },
+        
+                    {
+                        "field_id" : "auto_body_repair",
+                        "field_label": "Auto Body Repair",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "--Please Select--",
+                        "field_options":[
+                            {
+                                "option_label":"Yes",
+                                "option_id":"yes",
+                                "option_value":"Yes"
+                            },
+        
+                            {
+                                "option_label":"No",
+                                "option_id":"no",
+                                "option_value":"No"
+                            } 
+                        ],
+                        "field_type":"select",
+                        "field_value":"",
+                        "errors":""
+                    },
+        
+                    {
+                        "field_id" : "other_services",
+                        "field_label": "Other Services",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "--Please Select--",
+                        "field_options":[
+                            {
+                                "option_label":"Yes",
+                                "option_id":"yes",
+                                "option_value":"Yes"
+                            },
+        
+                            {
+                                "option_label":"No",
+                                "option_id":"no",
+                                "option_value":"No"
+                            } 
+                        ],
+                        "field_type":"select",
+                        "field_value":"",
+                        "errors":""
+                    }
+                ]
+            },
+            {
+                "layout": "row",
+                "page_sub_label":"Map the losses to coverage existing on a policy",
+                "fields":[
+                    {
+                        "field_id" : "map_loss_to_coverage",
+                        "field_label": "",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "",
+                        "field_type":"radio",
+                        "field_options":[
+        
+                            {
+                                "option_label":"Collision",
+                                "option_id":"collision",
+                                "option_value":"Collision"
+                            },
+        
+                            {
+                                "option_label":"Comprehensive",
+                                "option_id":"comprehensive",
+                                "option_value":"Comprehensive"
+                            },
+        
+                            {
+                                "option_label":"Theft",
+                                "option_id":"theft",
+                                "option_value":"Theft"
+                            },
+        
+                            {
+                                "option_label":"CNG fitment",
+                                "option_id":"CNG_fitment",
+                                "option_value":"CNG fitment"
+                            }
+                        ],
+                        "field_value":"",
+                        "errors":""
+                    }
+                ]
             }
+          
         ]
     }
 ]

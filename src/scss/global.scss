@@ -6,7 +6,8 @@ body{
     overflow-x: hidden;
 }
 .navbar-expand-lg { 
-    flex-wrap : wrap ; justify-content : space-between ; 
+    flex-wrap : wrap ; 
+    justify-content : space-between ; 
 }
 
 @media ( min-width : 1400px )
@@ -18,23 +19,71 @@ body{
 
 .form-layout {
     background-color:white;
-    margin: 50px 200px 50px 200px;
+    margin: 50px 292px 50px 292px;
     height: auto;
     justify-content: center;
     border-radius: 25px;
 }
 
-.page_label {
+.page-label {
     text-align: center;
     color: #5A2F7D;
     font-weight: bolder;
+    font:normal normal 800 30px/37px Gilroy;
     
 }
 
-.page_description {
+.page-description {
     text-align: center;
+    font: normal normal normal 16px/19px Karla;
 }
 
-.claim_page_label {
-    background-color:whitesmoke;
+.page-sub-label {
+    background-color:#F7F5F7;
+    font: normal normal bold 21px/24px Karla;
+}
+
+
+.field-label{
+    font: normal normal normal 16px/19px Karla;
+}
+
+.button-rounded{
+    border-radius: 33px;
+    font-size: 16px;
+    padding: 10px 40px 10px 40px;
+    width: fit-content;
+    opacity: 1;
+  }
+  
+  .green-btn{
+    background: #32B480;
+  }
+
+  .grey-btn{
+    background: #676574;
+  }
+
+  
+.mandatory{
+    color: red;
+  }
+
+
+.toast{
+
+   align-items: center;
+}
+
+.toast-header{
+  color:red;
+  font: normal normal normal 21px/24px Karla;
+  font-weight: bolder;
+  
+}
+
+.toast-body{
+  color:black;
+  font: normal normal normal 16px/19px Karla;
+  font-weight: normal;
 }

@@ -11,13 +11,12 @@ const MultipleSelect = ({
     field_mandatory
 }) => {
 
+    
+    const { handleChange } = useContext(FormContext)
 
     return (
-        <Form.Group className='pb-5'>
-            <Form.Label>{field_label}</Form.Label>
-            {
-            field_mandatory == "yes" ? <span className="mandatory"><b> * </b></span> : " "
-            }
+        <Form.Group className='pb-4'>
+            <Form.Label className='field-label'>{field_label}</Form.Label>
             <Form.Control className="form-field" as="select"
              multiple={true} 
              value={field_value || []}
