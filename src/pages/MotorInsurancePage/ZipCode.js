@@ -31,9 +31,9 @@ const ZipCode = ({...props}) => {
 
                     // get all the zip code and location
                     <Row>{
-                    props.zipListlist.map((record) => {
+                    props.zipListlist.map((record, index) => {
                         return(
-                            <Row>
+                            <Row key={index}>
                             <Col lg={4}>
                                 ZipCode: {record.zipCode}
                             </Col>

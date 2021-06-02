@@ -335,10 +335,52 @@
                         "field_placeholder": "",
                         "field_type":"radio",
                         "field_options":[
-                            {
+                                 {
                                 "option_label":"Yes",
-                                "option_id":"yes",
-                                "option_value":"Yes"
+                                "option_id":"rental_yes",
+                                "option_value":"Yes",
+                                "yes_options":[
+                                    
+                                {
+                                    "yes_options_id" : "address_line_1",
+                                    "yes_options_label": "Address Line 1",
+                                    "yes_options_mandatory": "yes",
+                                    "yes_options_placeholder": "",
+                                    "yes_options_type":"text",
+                                    "yes_options_value":"",
+                                    "errors":""
+                                },
+
+                                {
+                                    "yes_options_id" : "address_line_2",
+                                    "yes_options_label": "Address Line 2",
+                                    "yes_options_mandatory": " ",
+                                    "yes_options_placeholder": "",
+                                    "yes_options_type":"text",
+                                    "yes_options_value":"",
+                                    "errors":""
+                                },
+
+                                {
+                                    "yes_options_id" : "country",
+                                    "yes_options_label": "Country",
+                                    "yes_options_mandatory": "yes",
+                                    "yes_options_placeholder": "",
+                                    "yes_options_type":"text",
+                                    "yes_options_value":"",
+                                    "errors":""
+                                },
+
+                                {
+                                    "yes_options_id" : "zip_code",
+                                    "yes_options_label": "Zip Code",
+                                    "yes_options_mandatory": "yes",
+                                    "yes_options_placeholder": "",
+                                    "yes_options_type":"text",
+                                    "yes_options_value":"",
+                                    "errors":""
+                                }
+                                ]
                             },
         
                             {
@@ -360,8 +402,50 @@
                         "field_options":[
                             {
                                 "option_label":"Yes",
-                                "option_id":"yes",
-                                "option_value":"Yes"
+                                "option_id":"towing_yes",
+                                "option_value":"Yes",
+                                "yes_options":[
+                                    
+                                    {
+                                        "yes_options_id" : "address_line_1",
+                                        "yes_options_label": "Address Line 1",
+                                        "yes_options_mandatory": "yes",
+                                        "yes_options_placeholder": "",
+                                        "yes_options_type":"text",
+                                        "yes_options_value":"",
+                                        "errors":""
+                                    },
+    
+                                    {
+                                        "yes_options_id" : "address_line_2",
+                                        "yes_options_label": "Address Line 2",
+                                        "yes_options_mandatory": " ",
+                                        "yes_options_placeholder": "",
+                                        "yes_options_type":"text",
+                                        "yes_options_value":"",
+                                        "errors":""
+                                    },
+    
+                                    {
+                                        "yes_options_id" : "country",
+                                        "yes_options_label": "Country",
+                                        "yes_options_mandatory": "yes",
+                                        "yes_options_placeholder": "",
+                                        "yes_options_type":"text",
+                                        "yes_options_value":"",
+                                        "errors":""
+                                    },
+    
+                                    {
+                                        "yes_options_id" : "zip_code",
+                                        "yes_options_label": "Zip Code",
+                                        "yes_options_mandatory": "yes",
+                                        "yes_options_placeholder": "",
+                                        "yes_options_type":"text",
+                                        "yes_options_value":"",
+                                        "errors":""
+                                    }
+                                    ]
                             },
         
                             {
@@ -382,8 +466,50 @@
                         "field_options":[
                             {
                                 "option_label":"Yes",
-                                "option_id":"yes",
-                                "option_value":"Yes"
+                                "option_id":"auto_body_yes",
+                                "option_value":"Yes",
+                                "yes_options":[
+                                    
+                                    {
+                                        "yes_options_id" : "address_line_1",
+                                        "yes_options_label": "Address Line 1",
+                                        "yes_options_mandatory": "yes",
+                                        "yes_options_placeholder": "",
+                                        "yes_options_type":"text",
+                                        "yes_options_value":"",
+                                        "errors":""
+                                    },
+    
+                                    {
+                                        "yes_options_id" : "address_line_2",
+                                        "yes_options_label": "Address Line 2",
+                                        "yes_options_mandatory": " ",
+                                        "yes_options_placeholder": "",
+                                        "yes_options_type":"text",
+                                        "yes_options_value":"",
+                                        "errors":""
+                                    },
+    
+                                    {
+                                        "yes_options_id" : "country",
+                                        "yes_options_label": "Country",
+                                        "yes_options_mandatory": "yes",
+                                        "yes_options_placeholder": "",
+                                        "yes_options_type":"text",
+                                        "yes_options_value":"",
+                                        "errors":""
+                                    },
+    
+                                    {
+                                        "yes_options_id" : "zip_code",
+                                        "yes_options_label": "Zip Code",
+                                        "yes_options_mandatory": "yes",
+                                        "yes_options_placeholder": "",
+                                        "yes_options_type":"text",
+                                        "yes_options_value":"",
+                                        "errors":""
+                                    }
+                                    ]
                             },
         
                             {

@@ -26,11 +26,17 @@ const handleSubmit = (event) => {
       if(item.field_mandatory === "yes" && item.field_value === ""){ 
         item.errors = "Should not be empty";
         console.log(item.errors);
-        
       }
     })
-    setElements(newElements);
-    console.log(newElements)
+     setElements(newElements)
+     console.log(elements, 'at submit')
+
+    // newElements.fields.forEach(field => {
+    //   field.field_value = ""
+    //   field.errors = ""
+    // })
+    //  setElements(newElements)
+    //  console.log(elements, 'after submit')
 }
 
 const handleChange = ( id, event ) => {
@@ -55,11 +61,27 @@ const handleChange = ( id, event ) => {
 }
 
 const handleCancel = () => {
-    setElements("");
     setCancel(!cancel);
 }
 
+const clearEnteredData = () => {
+
+    const newElements = {...elements}
+    newElements.fields.forEach(field => {
+        field.field_value = ""
+        field.errors = ""
+      })
+       setElements(newElements)
+       console.log(elements, 'after cancel')
+
+       setCancel(!cancel);
+
+}
+
+
+
 return(
+
 
     <FormContext.Provider value={{handleChange}}>
 
@@ -86,6 +108,7 @@ return(
         >
             <Toast.Header className="toast-header"> Are you sure? </Toast.Header>
             <Toast.Body className="toast-body"> On cancelling you will loose the entered data </Toast.Body>
+            <Button variant="success" className="button-rounded green-btn" onClick={clearEnteredData}> Yes </Button>
         </Toast>
 
 
@@ -101,7 +124,7 @@ return(
                 <Button variant="success" className="button-rounded green-btn" 
                 type="submit" 
                 onClick={(event) => handleSubmit(event)}>
-                Next
+                Submit
                 </Button>
             </Col>
         </Row>

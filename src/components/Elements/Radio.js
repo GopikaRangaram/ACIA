@@ -7,12 +7,10 @@ import { Button } from 'react-bootstrap';
 
 function Radio({field_id, 
     field_label,
-    field_placeholder, 
     field_value, 
     field_options, 
     field_mandatory, 
-    errors,
-    yes_options,
+    errors
     }){
 
 

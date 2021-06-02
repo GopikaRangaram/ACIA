@@ -7,15 +7,15 @@ export default function FooterList() {
 
 
 return (
-    list.map((item) => {
+    list.map((item, item_index) => {
     return(
-    <Col className='footer-Column'>
+    <Col className='footer-Column' key={item_index}>
     <div className="columnTitle"><b>{item.title}</b></div>
     <ul className="list-unstyled">
     {
-      item.content.map((links) => {
+      item.content.map((links,index) => {
         return(
-          <li key = {links.label}>
+          <li key = {index}>
              <Link to={links.url} className="innerLink py-1">{links.label}</Link>
           </li>
          )

@@ -76,13 +76,14 @@ function Header(){
               <NavDropdown className="mx-3 claim" href="#claim" title={<span style={{color:"white"}}>Claim</span>}
                 onMouseOver={()=>{setIsClaimOpen(true)}} onMouseLeave={()=>{setIsClaimOpen(false)}} show={isClaimOpen}>
                   {
-                    headerJSON.map((item) => {
+                    headerJSON.map((item, item_index) => {
                       return(
-                        <Row>
+                        <Row key={item_index}>
                           {
-                            item.claimOptions.map((link) => {
+                            item.claimOptions.map((link, index) => {
                               return(
-                                 <NavDropdown.Item>
+                                 <NavDropdown.Item
+                                 key={index}>
                                    {link.Option}
                                  </NavDropdown.Item>
                               )
@@ -97,13 +98,14 @@ function Header(){
               <NavDropdown className="mx-3 claim" href="#claim" title={<span style={{color:"white"}}>Pay a Bill</span>}
                 onMouseOver={()=>{setIsBillOpen(true)}} onMouseLeave={()=>{setIsBillOpen(false)}} show={isBillOpen}>
                   {
-                    headerJSON.map((item) => {
+                    headerJSON.map((item,item_index) => {
                       return(
-                        <Row>
+                        <Row key={item_index}>
                           {
-                            item.payBillOptions.map((link) => {
+                            item.payBillOptions.map((link,index) => {
                               return(
-                                 <NavDropdown.Item>
+                                 <NavDropdown.Item
+                                 key={index}>
                                    {link.Option}
                                  </NavDropdown.Item>
                               )

@@ -118,7 +118,7 @@ return (
                 <Button variant="success" className="button-rounded green-btn" 
                 type="submit" 
                 onClick={(event) => handleSubmit(event)}>
-                Next
+                Submit
                 </Button>
             </Col>
         </Row>
