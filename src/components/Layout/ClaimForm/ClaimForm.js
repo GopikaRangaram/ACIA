@@ -3,7 +3,7 @@ import ClaimFormData from './ClaimFormData.json';
 import { useState, useEffect } from 'react';
 import Element from '../Element';
 import FormLayout from '../FormLayout';
-import { Card, Row, Col, Button} from 'react-bootstrap';
+import { Card, Row, Col, Button, Toast} from 'react-bootstrap';
 import { FormContext } from '../FormContext';
 
 
@@ -11,11 +11,48 @@ const ClaimForm = () => {
 
     const [elements,setElements] = useState(null);
 
+    const [ cancel, setCancel ] = useState(false);
+
     useEffect(() => { 
         setElements(ClaimFormData[0])  
     },[])
 
     const {fields,page_label, page_description } = elements ?? {}
+
+
+
+
+    const handleCancel = () => {
+      setCancel(!cancel);
+  }
+  
+  const clearEnteredData = () => {
+  
+      const newElements = {...elements}
+      newElements.fields.forEach(row => {
+          row.fields.forEach(field => {
+
+            field.field_value = ""
+            field.errors=""
+
+            if(field.yes_options){
+            field.yes_options.forEach(inner_field => {
+              inner_field.field_value = ""
+              inner_field.errors =  ""
+            })
+            
+          }
+
+          })
+
+        })
+         setElements(newElements)
+         console.log(elements, 'after cancel')
+  
+         setCancel(!cancel);
+  
+  }
+  
 
 
 
@@ -27,13 +64,13 @@ const ClaimForm = () => {
       newElements.fields.forEach(row => {
         row.fields.forEach(field => {
   
-        if(field.field_mandatory == "yes" && field.field_value == ""){
+        if(field.field_mandatory === "yes" && field.field_value === ""){
             field.errors = "Should not be empty";
             setElements(newElements);
         }
       })
       });
-  
+   
       console.log(elements)
     }
     
@@ -42,25 +79,38 @@ const ClaimForm = () => {
 
     const handleChange = ( id, event ) => {
 
+
       const newElements = { ...elements }
 
       newElements.fields.forEach(row => {
         row.fields.forEach(field => {
         if (id === field.field_id) {
           switch (field.field_type) {
-            case 'checkbox':
-              field.field_value = event.target.checked;
-              break;
-  
-            case 'multiple_select':
-              field.field_value = Array.from(event.target.selectedOptions, option => option.value);
-              break;
               
             default:
               field.field_value = event.target.value;
               break;
           }
         }
+
+
+      if(field.yes_options) {
+        field.yes_options.forEach(yes_option => {
+          if(id ===  yes_option.field_id) {
+            switch (yes_option.field_type) {
+
+              default:
+                yes_option.field_value = event.target.value;
+                break;
+            }
+
+          }
+        })
+
+      }
+
+        
+
         field.errors="";
         setElements(newElements)
     })
@@ -83,7 +133,7 @@ return (
             
             if (field.layout === "row") {  
                 return (
-                  <Row>
+                  <Row key={index}>
                   <p className="page-sub-label p-3 my-5">{field.page_sub_label}</p>
                   <FormLayout
                     key={index}
@@ -95,7 +145,7 @@ return (
               else
               {
                 return (
-                  <Row>
+                  <Row key={index}>
                    <p className="page-sub-label p-5 my-5">{field.page_sub_label}</p>
                   <Element
                     key={index}
@@ -108,10 +158,20 @@ return (
         }
         </Row>
 
-        <Col lg={7}/>
+
+        <Toast className="toast" show={cancel}
+        onClose={handleCancel}
+        >
+            <Toast.Header className="toast-header"> Are you sure? </Toast.Header>
+            <Toast.Body className="toast-body"> On cancelling you will loose the entered data </Toast.Body>
+            <Button variant="success" className="button-rounded green-btn" onClick={clearEnteredData}> Yes </Button>
+        </Toast>
+
+        <Col lg={6}/>
             <Col>
                 <Button variant="success" className="button-rounded grey-btn" 
                 type="submit" 
+                onClick={handleCancel}
                 >
                 Cancel
                 </Button> { ' ' }

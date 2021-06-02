@@ -13,7 +13,8 @@ const Element = ( {field: {
     field_mandatory,
     errors,
     field_value,
-    field_options
+    field_options,
+    yes_options
 } }) => {
 
     switch (field_type) {
@@ -24,8 +25,20 @@ const Element = ( {field: {
                 field_placeholder = {field_placeholder}
                 field_mandatory = {field_mandatory}
                 errors={errors}
+                field_type={field_type}
                 field_value = {field_value}
             />)
+
+            case 'password':
+                return (<TextInput
+                    field_id = {field_id}
+                    field_label = {field_label}
+                    field_placeholder = {field_placeholder}
+                    field_mandatory = {field_mandatory}
+                    errors={errors}
+                    field_type={field_type}
+                    field_value = {field_value}
+                />)
               
 
         case 'select':
@@ -49,6 +62,7 @@ const Element = ( {field: {
                 field_mandatory = {field_mandatory}
                 errors={errors}
                 field_options = { field_options }
+                yes_options = { yes_options ? yes_options: "" }
             />)
                
 

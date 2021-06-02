@@ -8,11 +8,11 @@ function FormLayout({ field } ){
         return (
             <Form.Row>
                 <Row>
-                {fields.map((field, i) => {
+                {fields.map((field, index) => {
                     return (
-                    <Col lg={6}>
+                    <Col lg={6} key={index}>
                         <Element
-                            key={i}
+                            key={index}
                             field={field}
                         />
                     </Col>

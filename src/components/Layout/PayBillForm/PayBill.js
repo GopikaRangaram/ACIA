@@ -14,7 +14,7 @@ const [ cancel, setCancel ] = useState(false);
 
 useEffect(() => {
     setElements(payBill[0])
-})
+}, [])
 
 const {fields,page_label, page_description } = elements ?? {}
 

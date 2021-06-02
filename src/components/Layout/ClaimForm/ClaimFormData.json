@@ -338,57 +338,57 @@
                                  {
                                 "option_label":"Yes",
                                 "option_id":"rental_yes",
-                                "option_value":"Yes",
-                                "yes_options":[
-                                    
-                                {
-                                    "yes_options_id" : "address_line_1",
-                                    "yes_options_label": "Address Line 1",
-                                    "yes_options_mandatory": "yes",
-                                    "yes_options_placeholder": "",
-                                    "yes_options_type":"text",
-                                    "yes_options_value":"",
-                                    "errors":""
-                                },
-
-                                {
-                                    "yes_options_id" : "address_line_2",
-                                    "yes_options_label": "Address Line 2",
-                                    "yes_options_mandatory": " ",
-                                    "yes_options_placeholder": "",
-                                    "yes_options_type":"text",
-                                    "yes_options_value":"",
-                                    "errors":""
-                                },
-
-                                {
-                                    "yes_options_id" : "country",
-                                    "yes_options_label": "Country",
-                                    "yes_options_mandatory": "yes",
-                                    "yes_options_placeholder": "",
-                                    "yes_options_type":"text",
-                                    "yes_options_value":"",
-                                    "errors":""
-                                },
-
-                                {
-                                    "yes_options_id" : "zip_code",
-                                    "yes_options_label": "Zip Code",
-                                    "yes_options_mandatory": "yes",
-                                    "yes_options_placeholder": "",
-                                    "yes_options_type":"text",
-                                    "yes_options_value":"",
-                                    "errors":""
-                                }
-                                ]
+                                "option_value":"Yes"
                             },
         
                             {
                                 "option_label":"No",
-                                "option_id":"no",
+                                "option_id":"rental_no",
                                 "option_value":"No"
                             } 
                         ],
+                        "yes_options":[
+                                    
+                            {
+                                "field_id" : "address_line_1",
+                                "field_label": "Address Line 1",
+                                "field_mandatory": "yes",
+                                "field_placeholder": "",
+                                "field_type":"text",
+                                "field_value":"",
+                                "errors":""
+                            },
+
+                            {
+                                "field_id" : "address_line_2",
+                                "field_label": "Address Line 2",
+                                "field_mandatory": " ",
+                                "field_placeholder": "",
+                                "field_type":"text",
+                                "field_value":"",
+                                "errors":""
+                            },
+
+                            {
+                                "field_id" : "country",
+                                "field_label": "Country",
+                                "field_mandatory": "yes",
+                                "field_placeholder": "",
+                                "field_type":"text",
+                                "field_value":"",
+                                "errors":""
+                            },
+
+                            {
+                                "field_id" : "zip_code",
+                                "field_label": "Zip Code",
+                                "field_mandatory": "yes",
+                                "field_placeholder": "",
+                                "field_type":"text",
+                                "field_value":"",
+                                "errors":""
+                            }
+                            ],
                         "field_value":"",
                         "errors":""
                     },
@@ -403,57 +403,58 @@
                             {
                                 "option_label":"Yes",
                                 "option_id":"towing_yes",
-                                "option_value":"Yes",
-                                "yes_options":[
-                                    
-                                    {
-                                        "yes_options_id" : "address_line_1",
-                                        "yes_options_label": "Address Line 1",
-                                        "yes_options_mandatory": "yes",
-                                        "yes_options_placeholder": "",
-                                        "yes_options_type":"text",
-                                        "yes_options_value":"",
-                                        "errors":""
-                                    },
-    
-                                    {
-                                        "yes_options_id" : "address_line_2",
-                                        "yes_options_label": "Address Line 2",
-                                        "yes_options_mandatory": " ",
-                                        "yes_options_placeholder": "",
-                                        "yes_options_type":"text",
-                                        "yes_options_value":"",
-                                        "errors":""
-                                    },
-    
-                                    {
-                                        "yes_options_id" : "country",
-                                        "yes_options_label": "Country",
-                                        "yes_options_mandatory": "yes",
-                                        "yes_options_placeholder": "",
-                                        "yes_options_type":"text",
-                                        "yes_options_value":"",
-                                        "errors":""
-                                    },
-    
-                                    {
-                                        "yes_options_id" : "zip_code",
-                                        "yes_options_label": "Zip Code",
-                                        "yes_options_mandatory": "yes",
-                                        "yes_options_placeholder": "",
-                                        "yes_options_type":"text",
-                                        "yes_options_value":"",
-                                        "errors":""
-                                    }
-                                    ]
+                                "option_value":"Yes"
                             },
         
                             {
                                 "option_label":"No",
-                                "option_id":"no",
+                                "option_id":"towing_no",
                                 "option_value":"No"
                             } 
                         ],
+
+                        "yes_options":[
+                                    
+                            {
+                                "field_id" : "address_line_1",
+                                "field_label": "Address Line 1",
+                                "field_mandatory": "yes",
+                                "field_placeholder": "",
+                                "field_type":"text",
+                                "field_value":"",
+                                "errors":""
+                            },
+
+                            {
+                                "field_id" : "address_line_2",
+                                "field_label": "Address Line 2",
+                                "field_mandatory": " ",
+                                "field_placeholder": "",
+                                "field_type":"text",
+                                "field_value":"",
+                                "errors":""
+                            },
+
+                            {
+                                "field_id" : "country",
+                                "field_label": "Country",
+                                "field_mandatory": "yes",
+                                "field_placeholder": "",
+                                "field_type":"text",
+                                "field_value":"",
+                                "errors":""
+                            },
+
+                            {
+                                "field_id" : "zip_code",
+                                "field_label": "Zip Code",
+                                "field_mandatory": "yes",
+                                "field_placeholder": "",
+                                "field_type":"text",
+                                "field_value":"",
+                                "errors":""
+                            }
+                            ],
                         "field_value":"",
                         "errors":""
                     },
@@ -467,49 +468,7 @@
                             {
                                 "option_label":"Yes",
                                 "option_id":"auto_body_yes",
-                                "option_value":"Yes",
-                                "yes_options":[
-                                    
-                                    {
-                                        "yes_options_id" : "address_line_1",
-                                        "yes_options_label": "Address Line 1",
-                                        "yes_options_mandatory": "yes",
-                                        "yes_options_placeholder": "",
-                                        "yes_options_type":"text",
-                                        "yes_options_value":"",
-                                        "errors":""
-                                    },
-    
-                                    {
-                                        "yes_options_id" : "address_line_2",
-                                        "yes_options_label": "Address Line 2",
-                                        "yes_options_mandatory": " ",
-                                        "yes_options_placeholder": "",
-                                        "yes_options_type":"text",
-                                        "yes_options_value":"",
-                                        "errors":""
-                                    },
-    
-                                    {
-                                        "yes_options_id" : "country",
-                                        "yes_options_label": "Country",
-                                        "yes_options_mandatory": "yes",
-                                        "yes_options_placeholder": "",
-                                        "yes_options_type":"text",
-                                        "yes_options_value":"",
-                                        "errors":""
-                                    },
-    
-                                    {
-                                        "yes_options_id" : "zip_code",
-                                        "yes_options_label": "Zip Code",
-                                        "yes_options_mandatory": "yes",
-                                        "yes_options_placeholder": "",
-                                        "yes_options_type":"text",
-                                        "yes_options_value":"",
-                                        "errors":""
-                                    }
-                                    ]
+                                "option_value":"Yes"  
                             },
         
                             {
@@ -518,6 +477,7 @@
                                 "option_value":"No"
                             } 
                         ],
+
                         "field_type":"select",
                         "field_value":"",
                         "errors":""

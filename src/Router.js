@@ -5,6 +5,7 @@ import { HomePage, AboutUs, PageNotFound, MotorInsurancePage} from './pages';
 import { store } from './actions/store';
 import ClaimForm from './components/Layout/ClaimForm/ClaimForm';
 import PayBill from './components/Layout/PayBillForm/PayBill';
+import Login from './components/Profile/Login';
 
 function Router() {
   return (
@@ -16,6 +17,7 @@ function Router() {
       {/* <Route exact path="/policy-holder" component={ ZipCode } /> */}
       <Route exact path="/claim" component={ ClaimForm } />
       <Route exact path="/pay-bill" component={ PayBill } />
+      <Route exact path="/login" component={ Login } />
       <Route component={PageNotFound} />
     </Switch>
     </Provider>

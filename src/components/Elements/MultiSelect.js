@@ -24,6 +24,7 @@ const MultipleSelect = ({
                 {
                 field_options.length > 0 && field_options.map((option, i) =>
                     <option value={option.option_label}
+                    onChange={event => handleChange(field_id, event)}
                      key={i}>{option.option_label}</option>
                 )}
                 </Form.Control>

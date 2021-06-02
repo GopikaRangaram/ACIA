@@ -1,0 +1,31 @@
+[
+
+{
+
+    "page_label":"Sign In",
+    "page_description":"Sign in to complete claim process",
+    "fields":[
+
+        {
+            "field_id" : "user_name",
+            "field_label": "User Name",
+            "field_mandatory": "yes",
+            "field_placeholder": "user name",
+            "field_type":"text",
+            "field_value":"",
+            "errors":""           
+        },
+
+        {
+            "field_id" : "password",
+            "field_label": "Password",
+            "field_mandatory": "yes",
+            "field_placeholder": "",
+            "field_type":"password",
+            "field_value":"",
+            "errors":""
+        }
+    ]
+}
+
+]
