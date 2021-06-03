@@ -10,7 +10,8 @@ function Radio({field_id,
     field_value, 
     field_options, 
     field_mandatory, 
-    yes_options,
+    rental_yes_options,
+    towing_yes_options,
     errors
     }){
 
@@ -71,8 +72,8 @@ function Radio({field_id,
 
         <div style={{display: rental ? 'block' : 'none'}}>
         <Row>
-          {yes_options.length > 0 &&
-            yes_options.map ((sub_field, index) => {
+          {rental_yes_options.length > 0 &&
+            rental_yes_options.map ((sub_field, index) => {
 
               return (
                 <Col lg={12} key={index}>
@@ -86,8 +87,8 @@ function Radio({field_id,
 
       <div style={{display: towing ? 'block' : 'none'}}>
         <Row>
-          {yes_options.length > 0 &&
-            yes_options.map ((sub_field, index) => {
+          {towing_yes_options.length > 0 &&
+            towing_yes_options.map ((sub_field, index) => {
 
               return (
                 <Col lg={12} key={index}>

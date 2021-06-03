@@ -94,8 +94,24 @@ const ClaimForm = () => {
         }
 
 
-      if(field.yes_options) {
-        field.yes_options.forEach(yes_option => {
+      if(field.rental_yes_options) {
+        field.rental_yes_options.forEach(yes_option => {
+          if(id ===  yes_option.field_id) {
+            switch (yes_option.field_type) {
+
+              default:
+                yes_option.field_value = event.target.value;
+                break;
+            }
+
+          }
+        })
+
+      }
+
+
+      if(field.towing_yes_options) {
+        field.towing_yes_options.forEach(yes_option => {
           if(id ===  yes_option.field_id) {
             switch (yes_option.field_type) {
 

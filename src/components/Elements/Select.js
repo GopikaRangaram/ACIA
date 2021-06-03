@@ -18,7 +18,7 @@ const Select = ({ field_id, field_label, field_placeholder, field_value, field_o
                 event => handleChange(field_id,event)
             }
             >
-            <option >-- Please Select --</option>
+            <option >{field_placeholder}</option>
                 {field_options.length > 0 && field_options.map((option, index) =>
                     <option 
                     value={option.option_label} 

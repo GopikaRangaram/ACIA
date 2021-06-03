@@ -14,7 +14,8 @@ const Element = ( {field: {
     errors,
     field_value,
     field_options,
-    yes_options
+    rental_yes_options,
+    towing_yes_options
 } }) => {
 
     switch (field_type) {
@@ -62,7 +63,8 @@ const Element = ( {field: {
                 field_mandatory = {field_mandatory}
                 errors={errors}
                 field_options = { field_options }
-                yes_options = { yes_options ? yes_options: "" }
+                rental_yes_options = { rental_yes_options ? rental_yes_options: "" }
+                towing_yes_options = { towing_yes_options ? towing_yes_options: "" }
             />)
                
 

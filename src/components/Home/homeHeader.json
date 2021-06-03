@@ -1,36 +1,31 @@
 [
     {    
-        "Title1":"Find",
-        "Title2": "Perfect",
-        "content1":"Connecting people through an easy to use web page application",
-        "content2":"built for all the device.",
-        "imagename":"family",
-        "dropdown" : [
-            {
-            "DropdownName":" Motor insurance",
-            "DropdownLink":[
-                {   
-                    "dropdownslink":"motor-dropdownlink1"
-                },
-                
+        "titleOne":"Find",
+        "titleTwo": "Perfect",
+        "contentOne":"Connecting people through an easy to use web page application",
+        "contentTwo":"built for all the device.",
+        "imageName":"family",
+        "fields":[
+            {   
+            "field_type":"select",
+            "field_id" : "insurance options",
+            "field_placeholder":"Select Policy",
+            "field_options":[
                 {
-                    "dropdownslink":"motor-dropdownlink2"
+                    "option_label":"Motor Insurance",
+                    "option_id":"motor_insurance",
+                    "option_value":"Motor Insurance",
+                    "option_url":"motor-insurance"
+                },
+
+                {
+                    "option_label":"Home Insurance",
+                    "option_id":"home_insurance",
+                    "option_value":"Home Insurance",
+                    "option_url":"home-insurance"
                 }
             ]
-            },
-
-            {
-            "DropdownName":" Vehicle Type",
-            "DropdownLink":[
-                    {   
-                        "dropdownslink":"vehicle-dropdownlink1"
-                    },
-                    
-                    {
-                        "dropdownslink":"vehicle-dropdownlink2"
-                    }
-                ]
-            }
-        ]
+        }
+    ]
     }
 ]

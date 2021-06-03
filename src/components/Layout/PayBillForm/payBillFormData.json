@@ -3,7 +3,6 @@
         "page_label":"Pay a Bill",
         "page_description":"Please fill the following details to pay a bill",
         "fields" : [
-
             {
                 "field_id" : "policy_type",
                 "field_label": "Policy Type",
