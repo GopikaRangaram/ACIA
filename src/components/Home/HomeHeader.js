@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container,Row, Col, Button,ButtonGroup} from 'react-bootstrap';
+import { Container,Row, Col, Button,ButtonGroup, Image} from 'react-bootstrap';
 import '../../scss/styles/HomePage.scss';
 import '../Layout/Header/header.scss';
 import header from './homeHeader.json';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import { useHistory} from 'react-router-dom';
 import Element from '../Layout/Element';
 import { FormContext } from '../Layout/FormContext';
@@ -12,17 +12,15 @@ import { FormContext } from '../Layout/FormContext';
 
 const HomeHeader = () => {
 
-    const [ homeHeader, setHeader ] = useState();
+    const [ homeHeader, setHeader ] = useState(header[0]);
 
     const [url, setUrl ] = useState();
 
 
-    useEffect(() => {
-        setHeader(header[0])
-    }, [])
+  
 
     
-const {fields, titleOne, titleTwo, contentOne, contentTwo, imageName } = homeHeader ?? {}
+    const {fields, titleOne, titleTwo, contentOne, contentTwo, imageName } = homeHeader ?? {}
 
 
     let history = useHistory();
@@ -78,7 +76,6 @@ const {fields, titleOne, titleTwo, contentOne, contentTwo, imageName } = homeHea
             <p className="content">{contentOne}<br></br> {contentTwo}</p>
             <div className="container-button">
                 <div className="container" >
-                
                 <ButtonGroup style={{alignItems:"center"}}>
                 {
                     fields? fields.map((field,index) => 
@@ -101,7 +98,7 @@ const {fields, titleOne, titleTwo, contentOne, contentTwo, imageName } = homeHea
 
             
             <Col className="header-image">
-            <img src={require(`../../assets/images/header/${imageName}.png`).default}
+            <Image src={require(`../../assets/images/header/${imageName}.png`).default}
             alt={imageName}/>
             </Col>
             
