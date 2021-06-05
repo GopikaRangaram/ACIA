@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect} from 'react';
 import Element from '../Layout/Element';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import { FormContext } from '../Layout/FormContext';
+import { FormHandleChangeContext } from '../Layout/FormContext';
 import loginForm from './login.json';
 
 const Login = () => {
@@ -60,7 +60,7 @@ const {fields,page_label, page_description } = elements ?? {}
 
 return (
 
-    <FormContext.Provider value={{handleChange}}>
+    <FormHandleChangeContext.Provider value={{handleChange}}>
     <Container>
         <Row  className='p-5'>
         <Col lg={4}>
@@ -76,7 +76,7 @@ return (
         </Row>
     
     </Container>
-    </FormContext.Provider>
+    </FormHandleChangeContext.Provider>
 
 )
 

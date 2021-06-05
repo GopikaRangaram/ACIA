@@ -1,20 +1,18 @@
 import React from 'react';
 import payBill from './payBillFormData.json';
-import { useState, useEffect} from 'react';
+import { useState } from 'react';
 import Element from '../Element';
 import { Card, Row, Col, Button, Toast} from 'react-bootstrap';
-import { FormContext } from '../FormContext';
+import { FormHandleChangeContext } from '../FormContext';
 
 const PayBill = () => {
 
 
-const [elements, setElements] = useState(null);
+const [elements, setElements] = useState(payBill[0]);
 
 const [ cancel, setCancel ] = useState(false);
 
-useEffect(() => {
-    setElements(payBill[0])
-}, [])
+
 
 const {fields,page_label, page_description } = elements ?? {}
 
@@ -83,7 +81,7 @@ const clearEnteredData = () => {
 return(
 
 
-    <FormContext.Provider value={{handleChange}}>
+    <FormHandleChangeContext.Provider value={{handleChange}}>
 
     <Card className='form-layout'>
         <Row  className='p-5'>
@@ -129,7 +127,7 @@ return(
             </Col>
         </Row>
     </Card>
-    </FormContext.Provider>
+    </FormHandleChangeContext.Provider>
 )
 
 }

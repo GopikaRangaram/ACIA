@@ -1,2 +1,4 @@
 import { createContext } from 'react';
-export const FormContext = createContext(null);
+export const FormHandleChangeContext = createContext(null);
+
+export const FormDetailsContext = createContext(null);

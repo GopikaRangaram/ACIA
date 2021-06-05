@@ -4,27 +4,96 @@ import { useState, useEffect } from 'react';
 import Element from '../Element';
 import FormLayout from '../FormLayout';
 import { Card, Row, Col, Button, Toast} from 'react-bootstrap';
-import { FormContext } from '../FormContext';
+import { FormHandleChangeContext } from '../FormContext';
 
 
 const ClaimForm = () => {
 
-    const [elements,setElements] = useState(null);
+    const [elements,setElements] = useState(ClaimFormData[0]);
 
     const [ cancel, setCancel ] = useState(false);
 
     useEffect(() => { 
-        setElements(ClaimFormData[0])  
+
+        
     },[])
 
     const {fields,page_label, page_description } = elements ?? {}
 
 
+   
+   
+    const loadClaimDetails =  async (policyNumber) => {
+      const response = await fetch("https://run.mocky.io/v3/5df17ffa-0b60-4d99-ab48-a9da129d1a8b");
+      const claimData = await response.json();
+      console.log(claimData.policy_number, policyNumber)
+      if(claimData.policy_number === policyNumber)
+        {
+          const newElements = {...elements}
+
+           newElements.fields.forEach(row => {
+
+            row.fields.forEach(field => {
+
+              if(field.field_id === "motor_Insurance")
+              field['field_value'] = claimData.policyType;
+
+              if(field.field_id === "first_name")
+              field['field_value'] = claimData.first_name;
+
+              if(field.field_id === "last_name")
+              field['field_value'] = claimData.last_name;
+
+              if(field.field_id === "address_line_1")
+              field['field_value'] = claimData.address_line1;
+
+              if(field.field_id === "address_line_2")
+              field['field_value'] = claimData.address_line2;
+
+              if(field.field_id === "country")
+              field['field_value'] = claimData.country;
+
+              if(field.field_id === "zip_code")
+              field['field_value'] = claimData.zip_code;
+
+              if(field.field_id === 'vehicles_involved_the_loss')
+              {
+                field.field_options.forEach(list => {
+                  console.log(list.option_label)
+                  switch(list.option_id) {
+                    case 'registration_number':
+                      list['option_value'] = claimData.registration_number
+                      break;
+
+                    case 'manufacturer':
+                      list['option_value'] = claimData.manufacturer
+                      break;
+
+                    case 'model' :
+                      list['option_value'] = claimData.model
+                      break;
+                    
+                    case 'year' :
+                      list['option_value'] = claimData.year
+                      break;
+
+                      default: list['option_value'] = null
+                      break;
+                  }
+                })
+              }
+
+            })
+          })
+
+           setElements(newElements)
+        }
+      }
 
 
     const handleCancel = () => {
       setCancel(!cancel);
-  }
+    }
   
   const clearEnteredData = () => {
   
@@ -85,6 +154,13 @@ const ClaimForm = () => {
       newElements.fields.forEach(row => {
         row.fields.forEach(field => {
         if (id === field.field_id) {
+
+
+        if(field.field_id === 'policy_number' && field.field_value.length === 8)
+        {
+          loadClaimDetails(field.field_value)
+        }
+
           switch (field.field_type) {
               
             default:
@@ -137,7 +213,7 @@ const ClaimForm = () => {
 
 return (
 
-    <FormContext.Provider value={{handleChange}}>
+    <FormHandleChangeContext.Provider value={{handleChange}}>
     <Card className='form-layout'>
         <Row  className='p-5'>
         <p className='page-label'>{page_label}</p>
@@ -196,10 +272,13 @@ return (
                 onClick={(event) => handleSubmit(event)}>
                 Submit
                 </Button>
+
             </Col>
         </Row>
     </Card>
-    </FormContext.Provider>
+
+    
+    </FormHandleChangeContext.Provider>
 
 )
 }

@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { Form } from 'react-bootstrap';
-import { FormContext } from '../Layout/FormContext';
+import { FormHandleChangeContext } from '../Layout/FormContext';
 
 
 function TextInput({field_id, field_label, field_placeholder, field_type, field_value, field_mandatory, errors}){
 
   
-    const { handleChange } = useContext(FormContext)
+    const { handleChange } = useContext(FormHandleChangeContext)
  
     return (
         <Form.Group className='pb-4'>

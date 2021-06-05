@@ -119,31 +119,31 @@
                         "field_label": "Vehicles involved the loss?",
                         "field_mandatory": "yes",
                         "field_placeholder": "",
-                        "field_type":"radio",
+                        "field_type":"table",
                         "field_options": [
         
                             {
                                 "option_label":"Registration Number",
                                 "option_id":"registration_number",
-                                "option_value":"Registration Number"
+                                "option_value":""
                             },
         
                             {
                                 "option_label": "Manufacturer",
                                 "option_id":"manufacturer",
-                                "option_value":"Manufacturer"
+                                "option_value":""
                             }, 
                             
                             {
                                 "option_label": "Model",
                                 "option_id":"model",
-                                "option_value":"Model"
+                                "option_value":""
                             },
         
                             {
                                 "option_label": "Year",
                                 "option_id":"year",
-                                "option_value":"Year"
+                                "option_value":""
                             }
         
                         ],
@@ -211,7 +211,7 @@
                 "page_sub_label":"Accident Location Details",
                 "fields":[
                     {
-                        "field_id" : "address_line_1",
+                        "field_id" : "accident_address_line_1",
                         "field_label": "Address Line 1",
                         "field_mandatory": "yes",
                         "field_placeholder": "",
@@ -221,7 +221,7 @@
                     },
 
                     {
-                        "field_id" : "address_line_2",
+                        "field_id" : "accident_address_line_2",
                         "field_label": "Address Line 2",
                         "field_mandatory": " ",
                         "field_placeholder": "",
@@ -231,7 +231,7 @@
                     },
 
                     {
-                        "field_id" : "country",
+                        "field_id" : "accident_country",
                         "field_label": "Country",
                         "field_mandatory": "yes",
                         "field_placeholder": "",
@@ -241,7 +241,7 @@
                     },
 
                     {
-                        "field_id" : "zip_code",
+                        "field_id" : "accident_zip_code",
                         "field_label": "Zip Code",
                         "field_mandatory": "yes",
                         "field_placeholder": "",
@@ -322,6 +322,17 @@
                     }
    
                 ]
+            },
+
+            {
+              "layout" : "row",
+               "fields": [
+                   {
+                       "field_id" : "add_involved_parties",
+                       "field_label" : "Add",
+                       "field_type" : "Button"
+                   }
+               ]  
             },
 
             {

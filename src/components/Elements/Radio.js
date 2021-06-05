@@ -1,6 +1,6 @@
 import React, { useContext, Fragment } from 'react';
 import { Form, Row, Col } from 'react-bootstrap';
-import { FormContext } from '../Layout/FormContext';
+import { FormHandleChangeContext } from '../Layout/FormContext';
 import Element from '../Layout/Element';
 import { useState } from 'react';
 
@@ -16,27 +16,30 @@ function Radio({field_id,
     }){
 
 
-    const { handleChange } = useContext(FormContext)
+    const { handleChange } = useContext(FormHandleChangeContext)
     
     const [rental, setRental] =   useState(false);
 
     const [towing, setTowing] = useState(false);
 
 
-    const checkIfSelectedorNot = (event) => {
+    const checkIfSelectedorNot = () => {
 
+
+
+      if(field_label === "Rental") {
 
         if (document.getElementById ('rental_yes').checked) {
             setRental (true);
           } 
-        else setRental(false);
+        else setRental(false); }
 
 
-
+      if(field_label === "Towing") {
         if(document.getElementById('towing_yes').checked) {
             setTowing (true);
         }
-        else setTowing (false);
+        else setTowing (false); }
 
     }
 
@@ -51,7 +54,7 @@ function Radio({field_id,
                 <Fragment key={index} >
                     <Col lg={6}>
                         <Form.Group id="radio-button-field" 
-                            onChange = { event => checkIfSelectedorNot(event) }
+                            onChange = { event => checkIfSelectedorNot() }
                              className="radio-button">
                                 <input id={option.option_id} name={field_id} className="radio-button-input" 
                                 type="radio" 

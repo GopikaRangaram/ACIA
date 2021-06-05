@@ -6,7 +6,7 @@ import header from './homeHeader.json';
 import {useState} from 'react';
 import { useHistory} from 'react-router-dom';
 import Element from '../Layout/Element';
-import { FormContext } from '../Layout/FormContext';
+import { FormHandleChangeContext } from '../Layout/FormContext';
 
 
 
@@ -68,7 +68,7 @@ const HomeHeader = () => {
    return (
 
     
-    <FormContext.Provider value={{handleChange}}>
+    <FormHandleChangeContext.Provider value={{handleChange}}>
     <Container fluid={'true'} className='header'>
     <Row>
             <Col xs={2} md={4} lg={6} className="mx-4">
@@ -104,7 +104,7 @@ const HomeHeader = () => {
             
     </Row>
     </Container>
-    </FormContext.Provider>
+    </FormHandleChangeContext.Provider>
    )
 }
 

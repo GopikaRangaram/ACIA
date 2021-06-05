@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { Form } from 'react-bootstrap';
-import { FormContext } from '../Layout/FormContext';
+import { FormHandleChangeContext } from '../Layout/FormContext';
 import { useState } from 'react'
 
 
@@ -16,7 +16,7 @@ function DateInput({
 
     const [currentDate, setCurrentDate] =  useState()
 
-    const { handleChange } = useContext(FormContext)
+    const { handleChange } = useContext(FormHandleChangeContext)
 
 
     useEffect(() => {
@@ -33,8 +33,8 @@ function DateInput({
     }, []
     )
     
-    console.log(currentDate, 'after useEffect')
-    console.log(typeof(currentDate),'type')
+    // console.log(currentDate, 'after useEffect')
+    // console.log(typeof(currentDate),'type')
 
     return (
         <Form.Group className='pb-4'>

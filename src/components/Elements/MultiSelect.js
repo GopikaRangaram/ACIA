@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Form } from 'react-bootstrap';
-import { FormContext } from '../Layout/FormContext';
+import { FormHandleChangeContext } from '../Layout/FormContext';
 
 const MultipleSelect = ({ 
     field_id, 
@@ -12,7 +12,7 @@ const MultipleSelect = ({
 }) => {
 
     
-    const { handleChange } = useContext(FormContext)
+    const { handleChange } = useContext(FormHandleChangeContext)
 
     return (
         <Form.Group className='pb-4'>
